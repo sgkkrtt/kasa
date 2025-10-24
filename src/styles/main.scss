@@ -1,14 +1,44 @@
-n-color: #ff6060;
+@use './header' as *;
+@use './footer' as *;
 
-body {
-	  font-family: 'Montserrat', sans-serif;
-	    color: $main-color;
-    }
+$primary-color: #ff6060;
+$font-main: 'Montserrat', sans-serif;
 
-header {
-	nav {
-	 display: flex;
-	 gap: 20px;
-	}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: $font-main;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: initial;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

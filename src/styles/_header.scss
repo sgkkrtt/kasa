@@ -1,0 +1,17 @@
+/* src/styles/_header.scss */
+.header{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:40px 100px 0 100px;
+}
+.header__logo{ height:68px; }
+.header__nav{ display:flex; gap:50px; color: black;}
+.header__link{ color:#ff6060; text-transform:uppercase; font-size:1.2rem; }
+.header__link.active{ text-decoration:underline; }
+@media (max-width:768px){
+  .header{ padding:20px; }
+  .header__logo{ height:45px; }
+  .header__link{ font-size:.9rem; }
+}
