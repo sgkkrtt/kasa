@@ -1,5 +1,8 @@
 @use './header' as *;
 @use './footer' as *;
+@use './banner' as *;
+@use './gallery' as *;
+@use './card' as *;
 
 $primary-color: #ff6060;
 $font-main: 'Montserrat', sans-serif;

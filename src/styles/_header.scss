@@ -8,10 +8,21 @@
 }
 .header__logo{ height:68px; }
 .header__nav{ display:flex; gap:50px; color: black;}
-.header__link{ color:#ff6060; text-transform:uppercase; font-size:1.2rem; }
+.header__link {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  &.active {
+    text-decoration: underline;
+  }
+}
+
 .header__link.active{ text-decoration:underline; }
 @media (max-width:768px){
   .header{ padding:20px; }
   .header__logo{ height:45px; }
   .header__link{ font-size:.9rem; }
 }
+

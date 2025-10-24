@@ -1,23 +1,19 @@
-import { Routes, Route } from 'react-router-dom'
-import Header from "./components/header.jsx"
-import Footer from "./components/footer.jsx"
-import Home from "./pages/home.jsx"
-import About from "./pages/about.jsx"
-import NotFound from "./pages/404.jsx"
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/home'
+import About from './pages/about'
+import Logement from './pages/logement'
+import Error from './pages/404'
 
 const App = () => {
   return (
-    <>
-    <Header />
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/a-propos" element={<About />} />
+        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-
-    <Footer />
-    </>
+    </Router>
   )
 }
 
