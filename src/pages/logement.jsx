@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
 import Slideshow from "../components/slideshow";
 import Collapse from "../components/collapse";
@@ -10,8 +10,9 @@ const Logement = () => {
   const { id } = useParams();
   const logement = logements.find((item) => item.id === id);
 
+  // 🔴 Redirection vers la page 404 si l'ID n'existe pas
   if (!logement) {
-    return <p>Logement introuvable</p>;
+    return <Navigate to="/404" replace />;
   }
 
   return (
