@@ -1,17 +1,34 @@
-import { useState } from 'react'
+import { useState } from "react";
+import arrowIcon from "../assets/arrow.svg";
+import "../styles/_collapse.scss";
 
 const Collapse = ({ title, content }) => {
-  const [open, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="collapse">
-      <div className="collapse__header" onClick={() => setOpen(!open)}>
-        <h3>{title}</h3>
-        <span className={`arrow ${open ? 'open' : ''}`}>^</span>
+      <div className="collapse__header" onClick={toggleCollapse}>
+        <h3 className="collapse__title">{title}</h3>
+        <img
+          src={arrowIcon}
+          alt="flèche"
+          className={`collapse__arrow ${isOpen ? "rotated" : ""}`}
+        />
       </div>
-      {open && <div className="collapse__content">{content}</div>}
-    </div>
-  )
-}
 
-export default Collapse
+      {isOpen && (
+        <div className="collapse__content">
+          {Array.isArray(content)
+            ? content.map((item, index) => <p key={index}>{item}</p>)
+            : <p>{content}</p>}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Collapse;

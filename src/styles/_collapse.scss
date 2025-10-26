@@ -1,43 +1,45 @@
 .collapse {
-  width: 86%;
-  margin: 2px auto;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 1023px;
+  margin: 0 auto 30px auto;
+  border-radius: 5px;
   overflow: hidden;
 
   &__header {
     background-color: #ff6060;
-    color: white;
-    padding: 2px 25px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  &__arrow.rotated {
+    transform: rotate(180deg);
   }
 
   &__content {
     background-color: #f6f6f6;
-    color: #333;
-    padding: 15px 25px;
-    animation: slideDown 0.3s ease;
+    color: #ff6060;
     font-size: 16px;
+    line-height: 1.5;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    animation: slideDown 0.3s ease;
   }
-}
-
-.arrow {
-  font-size: 30px;
-  font-weight: 900;
-  display: flex;
-  align-items: bottom;
-  justify-content: bottom;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-
-.arrow.open {
-  transform: rotate(180deg);
 }
 
 @keyframes slideDown {
@@ -48,5 +50,32 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+@media (max-width: 768px) {
+  .collapse {
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    &__header {
+      padding: 10px 15px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__content {
+      font-size: 14px;
+      padding: 15px;
+    }
+
+    &__arrow {
+      width: 20px;
+      height: 12px;
+    }
   }
 }
