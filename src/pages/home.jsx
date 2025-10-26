@@ -1,6 +1,8 @@
 import logements from '../data/logements.json'
 import Banner from '../components/banner.jsx'
 import Card from '../components/card'
+import "../styles/_home.scss";
+
 
 
 const Home = () => {

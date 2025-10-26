@@ -23,8 +23,10 @@ const Collapse = ({ title, content }) => {
       {isOpen && (
         <div className="collapse__content">
           {Array.isArray(content)
-            ? content.map((item, index) => <p key={index}>{item}</p>)
-            : <p>{content}</p>}
+            ? content.map((item, index) => (
+                <div key={index} className="collapse__text">{item}</div>
+              ))
+            : <div className="collapse__text">{content}</div>}
         </div>
       )}
     </div>

@@ -1,4 +1,5 @@
 import Collapse from '../components/collapse'
+import "../styles/about.scss";
 
 const About = () => {
   return (
