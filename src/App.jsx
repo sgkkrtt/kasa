@@ -4,7 +4,7 @@ import About from './pages/about'
 import Logement from './pages/logement'
 import Header from "./components/header"
 import Footer from "./components/footer"
-import Error from './pages/404'
+import NotFound from './pages/404'
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/logement/:id" element={<Logement />} />
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
