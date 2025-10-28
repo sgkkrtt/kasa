@@ -66,25 +66,6 @@
   }
 }
 
-/* TABLETTES */
-@media (max-width: 1024px) {
-  .home {
-    padding: 0 40px 40px 40px;
-  }
-
-  .banner {
-    height: 200px;
-
-    h1 {
-      font-size: 2rem;
-    }
-  }
-
-  .gallery {
-    gap: 25px;
-  }
-}
-
 /* MOBILE */
 @media (max-width: 768px) {
   .home {

@@ -1,96 +1,70 @@
-/* src/styles/_header.scss */
-
-
 .header {
-  width: 86%;
-  margin: 0 auto 40px auto; /* centrage + espace sous le header */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 40px; /* espace interne haut */
-}
+  max-width: 1240px;
+  width: 100%;
+  margin: 40px auto 20px auto;
+  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
 
-.header__logo {
-  height: 68px;
-}
+  &__logo {
+    width: 210px;
+  }
 
-.header__nav {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
+  &__nav {
+    display: flex;
+    gap: 40px;
+  }
 
-.header__link {
-  color: #000;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  &__link {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
 
-  &.active {
-    text-decoration: underline;
+    &.active {
+      text-decoration: underline;
+    }
   }
 }
 
-/* TABLETTES */
-@media (max-width: 1024px) {
-  .header {
-    width: 90%;
-    margin-bottom: 30px;
-    padding-top: 30px;
-  }
-
-  .header__logo {
-    height: 55px;
-  }
-
-  .header__nav {
-    gap: 30px;
-  }
-
-  .header__link {
-    font-size: 1rem;
-  }
-}
-
-/* MOBILE */
 @media (max-width: 768px) {
   .header {
-    width: 92%;
-    margin-bottom: 25px;
-    padding-top: 20px;
-  }
+    width: 90%;
+    margin: 20px auto;
 
-  .header__logo {
-    height: 40px;
-  }
+    &__logo {
+      width: 145px;
+    }
 
-  .header__nav {
-    gap: 20px;
-  }
+    &__nav {
+      gap: 20px;
+    }
 
-  .header__link {
-    font-size: 0.9rem;
+    &__link {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
   }
 }
 
-/* PETIT MOBILE (jusqu’à 320 px) */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .header {
-    width: 94%;
-    margin-bottom: 20px;
-    padding-top: 15px;
-  }
+    width: 100%;
+    margin: 15px auto;
 
-  .header__logo {
-    height: 32px;
-  }
+    &__logo {
+      width: 120px;
+    }
 
-  .header__nav {
-    gap: 12px;
-  }
+    &__nav {
+      gap: 15px;
+    }
 
-  .header__link {
-    font-size: 0.8rem;
-    text-transform: none;
+    &__link {
+      font-size: 12px;
+    }
   }
 }

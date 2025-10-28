@@ -5,6 +5,8 @@
 @use './card' as *;
 @use './collapse' as *;
 @use './about' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 
 $primary-color: #ff6060;
 $font-main: 'Montserrat', sans-serif;
@@ -62,7 +64,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    
+
     img {
       width: 120px;
     }
